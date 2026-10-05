@@ -1,0 +1,6 @@
+{
+  "type": "playerRegistration",
+  "content": {
+    "playerName": "Hans"
+  }
+}

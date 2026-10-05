@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="borderPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: bisque;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <VBox fx:id="rootVBox" alignment="CENTER">
+         <children>
+
+             <!-- The board pane -->
+            <HBox alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="anchorPane" centerShape="false" prefHeight="0.0" prefWidth="0.0" scaleShape="false">
+                     <children>
+                         <Pane fx:id="gamePane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="100.0">
+                           <children>
+                              <Pane fx:id="boardPane" prefHeight="0.0" prefWidth="0.0" translateX="50.0" translateY="50.0" />
+                           </children>
+                         </Pane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox fx:id="playerCardBox" alignment="CENTER" prefHeight="0.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <top>
+      <HBox fx:id="timerBox" alignment="TOP_CENTER" mouseTransparent="true" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </top>
+   <right>
+      <VBox fx:id="carpetsBox" alignment="TOP_RIGHT" prefHeight="200.0" prefWidth="100.0" visible="false" BorderPane.alignment="CENTER" />
+   </right>
+   <left>
+      <VBox maxWidth="170.0" prefHeight="239.0" prefWidth="170.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane maxWidth="0.0" prefHeight="100.0" prefWidth="0.0" />
+            <Button fx:id="toggleStageScore" mnemonicParsing="false" style="-fx-background-color: #A10000;" text="Etappenwertung" textFill="#efb58a" translateX="20.0">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Pane fx:id="scorePane" minHeight="40.0" prefHeight="200.0" prefWidth="170.0" translateX="20.0" />
+            <Pane maxWidth="0.0" prefHeight="200.0" prefWidth="0.0" />
+            <Button fx:id="exitButton" mnemonicParsing="false" prefHeight="39.0" style="-fx-background-color: #A10000;" text="Beenden" textFill="#efb58a" translateX="20.0">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+         </children>
+      </VBox>
+   </left>
+</BorderPane>

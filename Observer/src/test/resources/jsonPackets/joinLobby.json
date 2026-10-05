@@ -1,0 +1,7 @@
+{
+  "type": "joinLobby",
+  "content": {
+    "lobbyId": -1,
+    "joinAsPlayer": false
+  }
+}

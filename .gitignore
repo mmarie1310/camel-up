@@ -1,0 +1,23 @@
+# Maven build output
+**/target/
+**/dependency-reduced-pom.xml
+
+# Runtime data
+lobbies.json
+playerListSave.json
+*.log
+
+# IDE and operating-system files
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+.DS_Store
+Thumbs.db
+
+# Local environment files
+.env
+.env.*
+!.env.example

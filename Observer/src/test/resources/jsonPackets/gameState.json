@@ -1,0 +1,93 @@
+{
+  "type": "gameState",
+  "content": {
+    "gamePhase": "playing",
+    "boardSpaces": [
+      {
+        "spaceId": 0,
+        "camelIds": [0, 1, 2],
+        "playerCard": null
+      },
+      {
+        "spaceId": 1,
+        "camelIds": [-1, -2],
+        "playerCard": {
+          "playerId": 42,
+          "spacesMoved": -1
+        }
+      }
+    ],
+    "gameConfig": {
+      "playerCount": 6,
+      "numberOfSpaces": 3,
+      "camels": [
+        {"id": 0, "color": "#FF00FF"},
+        {"id": 1, "color": "#FF0000"},
+        {"id": 2, "color": "#0000FF"},
+        {"id": -1, "color": "#00FF00"},
+        {"id": -2, "color": "#FFFFFF"}
+      ],
+      "diceFaces": 6,
+      "numberOfBettingCards": 5,
+      "thinkingTime": 60000,
+      "visualizationTime": 5000,
+      "illegalMovePenalty": "forfeitCurrentStage",
+      "maxGameDuration": 600000,
+      "maxTurns": 50
+    },
+    "rolledDice": [
+      {"camelId": 0, "number": 3},
+      {"camelId": 1, "number": 6}
+    ],
+    "bettingCards": [
+      {"camelId": 0, "amount": 3},
+      {"camelId": 1, "amount": 0},
+      {"camelId": 2, "amount": 2}
+    ],
+    "players": [
+      {
+        "playerId": 123,
+        "name": "Hans",
+        "money": 0,
+        "bettingCards": [
+          {"camelId": 0, "worth": 2},
+          {"camelId": 1, "worth": 3},
+          {"camelId": 2, "worth": 2}
+        ],
+        "state": "playing"
+      },
+      {
+        "playerId": 321,
+        "name": "Peter",
+        "money": 100,
+        "bettingCards": [],
+        "state": "currentStageForfeit"
+      },
+      {
+        "playerId": 111,
+        "name": "Marie",
+        "money": 0,
+        "bettingCards": [
+          {"camelId": 0, "worth": 2},
+          {"camelId": 2, "worth": 5}
+        ],
+        "state": "gameForfeit"
+      }
+    ],
+    "turns": 42,
+    "gameDuration": 42,
+    "moveTimeRemaining": 42,
+    "finalBets": {
+      "firstCamel": [
+        {"playerId": 123, "camelId":  1},
+        {"playerId": 111, "camelId":  0},
+        {"playerId": 321, "camelId":  2}
+      ],
+      "lastCamel": [
+        {"playerId": 111, "camelId":  2},
+        {"playerId": 321, "camelId":  1},
+        {"playerId": 123, "camelId":  0}
+      ]
+    }
+  }
+}

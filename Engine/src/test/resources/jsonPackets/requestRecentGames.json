@@ -1,0 +1,6 @@
+{
+  "type": "requestRecentGames",
+  "content": {
+    "numGames": 10
+  }
+}

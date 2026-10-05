@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.oasys.observer.presentation.BetsViewController"
+      fx:id="betsView"
+      style="-fx-background-color: #eec399; -fx-padding: 5 5 6 5; -fx-border-radius: 6; -fx-background-radius: 10;"
+      alignment="CENTER" spacing="5.0"
+      prefWidth="250.0" prefHeight="265.0">
+    <children>
+
+        <!-- Abschnitt: Etappenwetten -->
+        <VBox spacing="10.0" alignment="CENTER" style="-fx-background-color: #930000; -fx-border-radius: 6; -fx-padding: 15; -fx-background-radius: 6;">
+            <Label text="Etappenwetten abgegeben:" style="-fx-font-size: 14; -fx-font-weight: bold;-fx-text-fill: #eec399;" />
+            <TableView fx:id="betsTable" maxHeight="100.0">
+                <columns>
+                    <TableColumn text="Kamel" fx:id="camelColumn" />
+                    <TableColumn text="Wert" fx:id="valueColumn" />
+                </columns>
+            </TableView>
+        </VBox>
+
+        <!-- Abschnitt: Gesamtwetten -->
+        <VBox spacing="10.0" alignment="CENTER" style="-fx-background-color: #930000; -fx-border-radius: 6; -fx-padding: 15; -fx-background-radius: 6;">
+            <Label text="Gesamtwetten abgegeben:" style="-fx-font-size: 14; -fx-font-weight: bold;-fx-text-fill: #eec399;"  />
+            <GridPane fx:id="totalBetsGrid" hgap="10.0" vgap="5.0" alignment="CENTER" >
+                <children>
+                    <Label text="Gewinnerwette:"  style="-fx-text-fill: #eec399;" GridPane.columnIndex="0" />
+                    <Label fx:id="winnerBetLabel" text="0"  style="-fx-text-fill: #eec399;" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+                    <Label text="Verliererwette:"  style="-fx-text-fill: #eec399;" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                    <Label fx:id="loserBetLabel" text="0"  style="-fx-text-fill: #eec399;" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+                </children>
+            </GridPane>
+        </VBox>
+
+        <!-- Zurück-Button -->
+        <Button fx:id="closeButton" text="Schließen"
+                style="-fx-background-color: #930000; -fx-font-size: 12; -fx-border-radius: 3;-fx-text-fill: #eec399;"
+                onAction="#closeOverlay" />
+    </children>
+</VBox>

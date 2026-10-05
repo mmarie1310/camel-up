@@ -1,0 +1,27 @@
+package com.oasys.observer.logic;
+
+public enum BoardEvent {
+    CAMEL,
+    GAME_TIME,
+    VISUAL_TIME,
+    THINKING_TIME,
+    ROUND_FINISH,
+    STAGE_SCORING,
+    CLIENT_ACK,
+    DICE_ROLL,
+    LOBBY_LIST,
+    RECENT_GAMES,
+    REQUEST_LOBBY_LIST,
+    BOARD_READY,
+    PLAYERS_UPDATED,
+    GAME_FINISH,
+    BACK_TO_MENU,
+    FEEDBACK_SUCCESS,
+    FEEDBACK_FAILED,
+    PLAYER_CARD,
+    PAUSE,
+    STAGE_BET,
+    WINNER_BET,
+    LOSER_BET,
+    CONNECTION_FAILED
+}

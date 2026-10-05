@@ -1,0 +1,7 @@
+{
+  "type": "placePlayerCard",
+  "content": {
+    "spaceId": 2,
+    "movingDirection": -1
+  }
+}

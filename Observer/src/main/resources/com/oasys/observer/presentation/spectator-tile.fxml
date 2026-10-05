@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="278.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oasys.observer.presentation.SpectatorTile">
+   <children>
+      <HBox alignment="CENTER" maxHeight="150.0" maxWidth="150.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 20; -fx-background-color: #A10000;">
+         <children>
+            <Label fx:id="numberLabel" alignment="CENTER" prefHeight="150.0" prefWidth="527.0" text="+1" textAlignment="CENTER" textFill="#efb58a">
+               <font>
+                  <Font size="96.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Label fx:id="playerNameLabel" text="Timo" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+   </children>
+</VBox>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oasys.server.presentation.ConfigViewController">
+
+  <!-- Background Image -->
+  <ImageView opacity="0.5" preserveRatio="false">
+    <image>
+      <Image url="@Background.png" />
+    </image>
+  </ImageView>
+
+  <!-- Main Content (VBox with Controls) -->
+  <VBox spacing="15" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <!-- Padding around the VBox -->
+    <padding>
+      <Insets bottom="15" left="15" right="15" top="15" />
+    </padding>
+
+    <!-- Main Pane -->
+    <Pane fx:id="mainPane" />
+
+    <!-- Title for the server configuration -->
+    <Label styleClass="title-label" text="Serverkonfiguration">
+      <font>
+        <Font name="System Bold" size="13.0" />
+      </font></Label>
+
+    <!-- Player Configuration -->
+    <HBox spacing="10">
+      <Label text="Anzahl der Spieler:" wrapText="true">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Label>
+      <Spinner fx:id="playerCountSpinner" editable="true">
+          <effect>
+            <SepiaTone level="0.1" />
+          </effect></Spinner>
+          <effect>
+            <SepiaTone />
+          </effect>
+    </HBox>
+
+    <!-- Board Size Configuration -->
+    <HBox spacing="10">
+      <Label text="Spielfeldgröße:">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Label>
+      <Spinner fx:id="boardSizeSpinner" editable="true">
+          <effect>
+            <SepiaTone level="0.1" />
+          </effect></Spinner>
+        <effect>
+          <SepiaTone />
+        </effect>
+    </HBox>
+
+    <!-- Camel Count Configuration -->
+    <HBox spacing="10">
+      <Label text="Anzahl der Kamele:">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Label>
+      <Spinner fx:id="camelCountSpinner" editable="true">
+        <effect>
+          <SepiaTone level="0.1" />
+        </effect></Spinner>
+      <effect>
+        <SepiaTone />
+      </effect>
+    </HBox>
+
+    <!-- Max Dice Value Configuration -->
+    <HBox spacing="10">
+      <Label text="Maximaler Würfelwert:">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Label>
+      <Spinner fx:id="diceMaxValueSpinner" editable="true">
+        <effect>
+          <SepiaTone level="0.1" />
+        </effect></Spinner>
+      <effect>
+        <SepiaTone />
+      </effect>
+    </HBox>
+
+    <!-- Betting Card Count Configuration -->
+    <HBox spacing="10">
+      <Label text="Anzahl der Wettscheine pro Kamel:">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Label>
+      <Spinner fx:id="bettingCardCountSpinner" editable="true">
+        <effect>
+          <SepiaTone level="0.1" />
+        </effect></Spinner>
+      <effect>
+        <SepiaTone />
+      </effect>
+  </HBox>
+
+    <!-- Thinking Time Configuration -->
+    <HBox spacing="10">
+      <Label text="Bedenkzeit pro Zug (Millisekunden):">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Label>
+      <Spinner fx:id="thinkingTimeSpinner" editable="true">
+        <effect>
+          <SepiaTone level="0.1" />
+        </effect></Spinner>
+      <effect>
+        <SepiaTone />
+      </effect>
+    </HBox>
+
+    <!-- Move Visualization Time Configuration -->
+    <HBox spacing="10">
+      <Label text="Visualisierungszeit pro Zug (Millisekunden):">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Label>
+      <Spinner fx:id="moveVisualizationTimeSpinner" editable="true">
+        <effect>
+          <SepiaTone level="0.1" />
+        </effect></Spinner>
+      <effect>
+        <SepiaTone />
+      </effect>
+    </HBox>
+
+    <!-- Foul Consequences Configuration -->
+    <HBox spacing="10">
+      <Label text="Konsequenz für Regelverstoß:">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Label>
+      <ChoiceBox fx:id="foulConsequencesChoiceBox" prefHeight="26.0" prefWidth="207.0">
+        <effect>
+          <SepiaTone level="0.1" />
+        </effect></ChoiceBox>
+      <effect>
+        <SepiaTone />
+      </effect>
+    </HBox>
+
+    <!-- Maximum Game Duration Configuration -->
+    <HBox spacing="10">
+      <Label text="Maximale Spieldauer (Millisekunden):">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Label>
+      <Spinner fx:id="maxGameTimeSpinner" editable="true">
+        <effect>
+          <SepiaTone level="0.1" />
+        </effect></Spinner>
+      <effect>
+        <SepiaTone />
+      </effect>
+    </HBox>
+
+    <!-- Maximum Turns Configuration -->
+    <HBox spacing="10">
+      <Label text="Maximale Züge:">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Label>
+      <Spinner fx:id="maxTurnsSpinner" editable="true">
+        <effect>
+          <SepiaTone level="0.1" />
+        </effect></Spinner>
+      <effect>
+        <SepiaTone />
+      </effect>
+    </HBox>
+
+    <!-- Action Buttons -->
+    <HBox alignment="center" spacing="20">
+      <Button onAction="#saveConfiguration" style="-fx-background-color: #3498DB; -fx-text-fill: white; -fx-font-size: 14;" text="Export" />
+      <Button onAction="#loadConfiguration" style="-fx-background-color: #2ECC71; -fx-text-fill: white; -fx-font-size: 14;" text="Laden" />
+      <Button onAction="#handleCombinedAction" style="-fx-background-color: #9B59B6; -fx-text-fill: white; -fx-font-size: 14;" text="Speichern" />
+      <Button onAction="#navigateBack" style="-fx-background-color: #E74C3C; -fx-text-fill: white; -fx-font-size: 14;" text="&lt;&lt; Zurück" />
+    </HBox>
+  </VBox>
+</StackPane>

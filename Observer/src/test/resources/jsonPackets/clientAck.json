@@ -1,0 +1,6 @@
+{
+  "type": "clientAck",
+  "content": {
+    "clientId": 1
+  }
+}

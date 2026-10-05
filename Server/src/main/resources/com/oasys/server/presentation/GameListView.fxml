@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oasys.server.presentation.GameListView">
+    <children>
+        <ImageView opacity="0.5" preserveRatio="false" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <image>
+                <Image url="@Background.png" />
+            </image>
+        </ImageView>
+
+        <!-- Left-aligned Button Bar -->
+        <VBox layoutY="18.0" prefHeight="483.0" prefWidth="140.0" spacing="20.0" style="-fx-background-color: #f0f0f0; -fx-background-color: sepia; -fx-padding: 10px;" AnchorPane.bottomAnchor="523.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="18.0">
+            <!-- Button for adding game -->
+            <Button mnemonicParsing="false" onAction="#addGame" style="-fx-font-size: 18; -fx-background-color: #4CAF50; -fx-text-fill: white; -fx-pref-width: 120; -fx-padding: 15px 20px;" text="+" />
+
+            <!-- Action buttons -->
+            <Button mnemonicParsing="false" onAction="#startGame" style="-fx-pref-width: 120; -fx-padding: 15px;" text="Starten" />
+            <Button mnemonicParsing="false" onAction="#pauseGame" style="-fx-pref-width: 120; -fx-padding: 15px;" text="Pausieren" />
+            <Button mnemonicParsing="false" onAction="#resumeGame" style="-fx-pref-width: 120; -fx-padding: 15px;" text="Fortsetzen" />
+            <Button mnemonicParsing="false" onAction="#cancelGame" style="-fx-pref-width: 120; -fx-padding: 15px;" text="Abbrechen" />
+            <Button mnemonicParsing="false" onAction="#resetAllGames" style="-fx-pref-width: 120; -fx-padding: 15px;" text="Alle Zurücksetzen" />
+        </VBox>
+
+        <!-- Main Content: Tables -->
+        <HBox spacing="20.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+            <!-- Table for game list -->
+            <TableView fx:id="gameListTable" prefHeight="100" HBox.hgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="gameNameColumn" minWidth="100.0" prefWidth="150.0" text="Spielname" />
+                    <TableColumn fx:id="statusColumn" minWidth="100.0" prefWidth="150.0" text="Status" />
+                    <TableColumn fx:id="timerColumn" minWidth="100.0" prefWidth="150.0" text="Timer" />
+                </columns>
+            </TableView>
+
+            <!-- Table for game configurations -->
+            <TableView fx:id="gameConfigTable" prefHeight="100" HBox.hgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="configKeyColumn" minWidth="120.0" prefWidth="180.0" text="Konfiguration" />
+                    <TableColumn fx:id="configValueColumn" minWidth="120.0" prefWidth="180.0" text="Wert" />
+                </columns>
+            </TableView>
+        </HBox>
+
+    </children>
+</AnchorPane>

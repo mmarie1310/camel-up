@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.oasys</groupId>
+    <artifactId>oasys-parent</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+
+    <name>Oasys</name>
+    <description>Multi-module Camel Up observer, server and game engine.</description>
+
+    <modules>
+        <module>Engine</module>
+        <module>Observer</module>
+        <module>Server</module>
+    </modules>
+</project>

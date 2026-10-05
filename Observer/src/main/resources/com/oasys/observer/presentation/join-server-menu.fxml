@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="borderPane" style="-fx-background-color: bisque;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+<StackPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="710.0" fitWidth="710.0" preserveRatio="false">
+         <image>
+            <Image url="@images/image_list.png" />
+         </image>
+      </ImageView>
+
+<VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="419.0" spacing="10.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"> <!-- fx:controller="com.oasys.observer.presentation.SceneController" -->
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #930000;" text="Camel Up Beobachter" textAlignment="CENTER" wrappingWidth="250.81251525878906">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Region prefHeight="25.0" prefWidth="200.0" />
+      <HBox alignment="CENTER" prefHeight="26.0" prefWidth="431.0" spacing="5.0">
+         <children>
+            <Label prefHeight="18.0" prefWidth="65.0" style="-fx-text-fill: #930000;" text="IP-Adresse:" />
+            <TextField fx:id="ipAddress" prefHeight="26.0" prefWidth="177.0" style="-fx-background-color: #930000; -fx-text-fill: #eec399;" text="localhost" />
+            <Label layoutX="32.0" layoutY="14.0" prefHeight="18.0" prefWidth="34.0" style="-fx-text-fill: #930000;" text="Port:" />
+            <TextField fx:id="portNumber" layoutX="137.0" layoutY="10.0" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: #930000; -fx-text-fill: #eec399;" text="62263" />
+            <Region prefHeight="26.0" prefWidth="65.0" />
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" onAction="#showGameList" prefHeight="30.0" prefWidth="135.0" style="-fx-background-color: #930000; -fx-text-fill: #eec399;" text="Server beitreten">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Button>
+                  <Text fx:id="errorText" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #930000;" />
+      <Region layoutX="210.0" layoutY="161.0" prefHeight="15.0" prefWidth="200.0" />
+      <Button mnemonicParsing="false" onAction="#closeApplication" prefHeight="0.0" prefWidth="64.0" style="-fx-background-color: #930000; -fx-text-fill: #eec399;" text="Beenden" />
+   </children>
+</VBox>
+   </children>
+</StackPane>
+   </center>
+</BorderPane>
