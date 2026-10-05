@@ -1,7 +1,6 @@
 module com.oasys.server {
 
     requires com.fasterxml.jackson.databind;
-    requires com.oasys.observer;
     requires com.google.gson;
     requires org.slf4j;
     requires javafx.fxml;
