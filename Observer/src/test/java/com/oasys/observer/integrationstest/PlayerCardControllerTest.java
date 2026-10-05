@@ -28,7 +28,7 @@ public class PlayerCardControllerTest {
 
     @BeforeAll
     public static void initToolkit() {
-        Platform.startup(() -> {});
+        FxTestSupport.initializeToolkit();
     }
 
     @BeforeEach
@@ -98,4 +98,3 @@ public class PlayerCardControllerTest {
         }
     }
 }
-

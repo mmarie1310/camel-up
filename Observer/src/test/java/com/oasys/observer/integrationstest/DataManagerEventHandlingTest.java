@@ -13,15 +13,9 @@ public class DataManagerEventHandlingTest {
     private MethodHandler methodHandler;
     private boolean camelUpdateNotified;
 
-    private static boolean toolkitInitialized = false;
-
     @BeforeEach
     public void setUp() {
-        // Sicherstellen, dass das JavaFX Toolkit nur einmal initialisiert wird, da sonst Fehler (?)
-        if (!toolkitInitialized) {
-            Platform.startup(() -> {});
-            toolkitInitialized = true;
-        }
+        FxTestSupport.initializeToolkit();
 
         boardUpdater = new BoardUpdater();
         methodHandler = new MethodHandler();

@@ -19,7 +19,7 @@ public class BetsViewControllerTest {
 
     @BeforeAll
     public static void initToolkit() {
-        Platform.startup(() -> {});
+        FxTestSupport.initializeToolkit();
     }
 
     @BeforeEach
